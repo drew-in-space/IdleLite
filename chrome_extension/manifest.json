@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+  
+    "name": "test",
+    "description": "test",
+    "version": "0.1",
+  
+
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["test.js"]
+      }
+    ],
+  
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  
+    "browser_action": {
+        "default_title": "Test",
+        "default_popup": "index.html"
+    },
+    "permissions": [
+        "activeTab",
+        "<all_urls>"
+    ]
+  }
